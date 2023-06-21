@@ -2,10 +2,9 @@ FROM python:3.11-slim
 
 EXPOSE 8000
 
-WORKDIR /home
-WORKDIR app
+WORKDIR /home/app
 
-ADD /hyper-app WORKDIR
+COPY ./hyper-app /home/app
 
 RUN pip install -r requirements.txt
 
